@@ -4,6 +4,9 @@ Typically in build templates you specify by convention to run your [Machine.Spec
 
 This fixes that.
 
+# Why not a PowerShell script instead
+
+I don't know PowerShell! Don't see it as something I need in my toolbelt to know either at this point in time. Seldom I do cross the boundary from Dev to Op or Build - I'm a dev and like to be in that space.
 
 # Usage
 
