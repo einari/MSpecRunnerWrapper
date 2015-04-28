@@ -15,8 +15,8 @@ namespace MSpecRunnerWrapper
             var location = entryAssembly.Location;
             var runnerDir = Path.GetDirectoryName(location);
 
-            var assemblies = args.Where(s => s.ToLowerInvariant().Contains(".dll"));
-            var arguments = args.Where(s => !s.ToLowerInvariant().Contains(".dll"));
+            var assemblies = args.Where(s => Path.GetExtension(s).ToLowerInvariant() == ".dll");
+            var arguments = args.Where(s => Path.GetExtension(s).ToLowerInvariant() != ".dll");
 
             var x86Assemblies = assemblies.Where(a => AssemblyName.GetAssemblyName(a).ProcessorArchitecture == ProcessorArchitecture.X86);
             var remainingAssemblies = assemblies.Where(a => !x86Assemblies.Contains(a));
